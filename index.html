@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DevOps-JOBS</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'Roboto', sans-serif;">
+ <center>
+  <div style="background-color: #f2eadc; height: 50px;width: 100%;padding: 5px; margin: 15px;">
+  	<h1>(Integration of 'Git' and 'Docker' with 'Jenkins')</h1>
+  </div>
+
+  <div style="background-color: #dcf2ee; width: 100%;padding: 5px; margin: 15px;">
+  	<h2 style="color: #e04916">JOB 01 | If Developer push to dev branch then Jenkins will fetch from dev and deploy on dev-docker environment </h2>
+
+  	<h4> 01.  First creating workspace to create dir and initialize with git</h4>
+  	<img src="01.png"> 
+  </div>
+
+  <div style="background-color: #dcf2ee; width: 100%;padding: 5px; margin: 15px;">
+  	<h4> 02. create a index.html for project by :<h3> nano index.html </h3></h4>
+  	<img src="02.png">
+  </div>
+
+  <div style="background-color: #dcf2ee; width: 100%;padding: 5px; margin: 15px;">
+  	<h4>03. create a dev branch </h4>
+  	<img src="03.png">
+  </div>
+
+  <div style="background-color: #dcf2ee; width: 100%;padding: 5px; margin: 15px;">
+  	<h4>04. create a file 'post-commit' in .git/hooks dir for auto push in git</h4>
+  	<img src="05.png">
+  </div>
+
+  <div style="background-color: #dcf2ee; width: 100%;padding: 5px; margin: 15px;">
+  	<h4>05. create a repo on github.com</h4>
+  	<img src="gitcre.png">
+  </div>
+
+  <div style="background-color: #dcf2ee; width: 100%;padding: 5px; margin: 15px;">
+  	<h4>06. create a item in Jenkins and setup for git</h4>
+  	<img src="jen01.png">
+  	<br>
+  	<h4>07. To fetch the repo from github use Poll SCM and frequency 1min</h4>
+  	<img src="jen02.png">
+  	<br>
+  	<h4>08. To Deploy on Docker</h4>
+  	<img src="jen03.png">
+  </div>
+
+  <div style="background-color: #dcf2ee; width: 100%;padding: 5px; margin: 15px;">
+  	<h4>The add all files and commit the work  and git pull also run form post-commit hook
+  		<br>Then project succesfully upload on github dev branch</h4>
+  		<img src="07.png">
+  
+  <div style="background-color: #dcf2ee; width: 100%;padding: 5px; margin: 15px;">
+  	<h4>when project deploy on git the jenkins tiggers by Poll SCM and clone the repo /srv/http and also create and Docker container and copy repo in dev-docker-container</h4>
+  	<img src="runje.png">
+  </div>
+
+  <div style="background-color: #dcf2ee; width: 100%;padding: 5px; margin: 15px;">
+  	<h2>JOB 02</h2>
+  	<br>
+  	<h4>Same process for the master branch </h4>
+  </div>
+
+  <div style="background-color: #dcf2ee; width: 100%;padding: 5px; margin: 15px;">
+  	<h4>check the both braches by QA and if changes found the merge the branch</h4>
+  	<img src="gitmerge.png">
+  	<br>
+  	<h4>After deploy the master braches project on github by git push and also jenkins tigger and also copy repo in master-docker</h4>
+  
+  </div>
+
+  <div style="background-color: #dcf2ee; width: 100%;padding: 5px; margin: 15px;">
+  	<h4>Finally Project depoly on master-docker-environment</h4>
+  	<h4>To clint side check the project goto address localhost:assignPort </h4>
+  	<img src="output.png">
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
